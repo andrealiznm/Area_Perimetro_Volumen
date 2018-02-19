@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Operaciones
     public void calcular(View view) {
         int id = view.getId();
 
