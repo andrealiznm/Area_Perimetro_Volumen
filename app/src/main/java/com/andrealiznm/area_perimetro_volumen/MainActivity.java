@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onRadioButtonClicked(View view) {
-
+        //Deshabilitar botones y limpiar
         eLadoa.setEnabled(false);
         eLadoa.setText("");
         eLadob.setEnabled(false);
