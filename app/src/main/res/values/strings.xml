@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Operaciones</string>
+    <string name="title">Seleccione la figura:</string>
+    <string name="triangulo">Triángulo</string>
+    <string name="cubo">Cubo</string>
+    <string name="circulo">Círculo</string>
+    <string name="cuadrado">Cuadrado</string>
+    <string name="title2">Calcular:</string>
+    <string name="area">Área</string>
+    <string name="perimetro">Perímetro</string>
+    <string name="volumen">Volumen</string>
+    <string name="calcular">Calcular</string>
+    <string name="ladoa">Lado a</string>
+    <string name="ladob">Lado b</string>
+    <string name="ladoc">Lado c</string>
+    <string name="radio">Radio</string>
+    <string name="altura">Altura</string>
+    <string name="respuesta">Respuesta</string>
+</resources>

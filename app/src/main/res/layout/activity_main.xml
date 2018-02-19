@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.andrealiznm.area_perimetro_volumen.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:layout_gravity="start"/>
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+        <RadioButton android:id="@+id/rCuadrado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cuadrado"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/rCirculo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/circulo"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/rTriangulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/triangulo"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/rCubo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cubo"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="@string/title2"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal"/>
+
+    <RadioGroup
+        android:id="@+id/rg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+        <RadioButton android:id="@+id/rPerimetro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perimetro"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/rArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/area"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/rVolumen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volumen"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/ladoa"
+        android:id="@+id/eLadoa"
+        android:enabled="false"
+        android:layout_gravity="start" />
+    <EditText
+        android:id="@+id/eLadob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:hint="@string/ladob"
+        android:enabled="false"
+        android:inputType="number" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/ladoc"
+        android:enabled="false"
+        android:id="@+id/eLadoc"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/altura"
+        android:enabled="false"
+        android:id="@+id/eAltura"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/radio"
+        android:enabled="false"
+        android:id="@+id/eRadio"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/respuesta"
+        android:enabled="false"
+        android:id="@+id/eRespuesta"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:onClick="calcular"
+        android:text="@string/calcular"
+        android:id="@+id/bCalcular"/>
+
+</LinearLayout>
