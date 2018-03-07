@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Operaciones
+    //Operaciones_
     public void calcular(View view) {
         int id = view.getId();
 
