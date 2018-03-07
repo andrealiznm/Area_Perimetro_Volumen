@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup rg1, rg2;
     Button bCalcular;
     int data, flag;
+    //float andrea = 1.2f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,38 +97,68 @@ public class MainActivity extends AppCompatActivity {
         int id = view.getId();
 
         if (id == R.id.bCalcular && flag == 1){ //Area Cuadrado
-            int a = Integer.parseInt(eLadoa.getText().toString());
-            int b = Integer.parseInt(eLadob.getText().toString());
-            data = a * b;
-            eRespuesta.setText(String.valueOf(data));
+            if (eLadoa.getText().toString().isEmpty() || eLadob.getText().toString().isEmpty()) {
+                eRespuesta.setText("Campo vacío");
+            }else {
+                int a = Integer.parseInt(eLadoa.getText().toString());
+                int b = Integer.parseInt(eLadob.getText().toString());
+                data = a * b;
+                eRespuesta.setText(String.valueOf(data));
+            }
         } else if (id == R.id.bCalcular && flag == 11) { // Perimetro Cuadrado
-            int a = Integer.parseInt(eLadoa.getText().toString());
-            int b = Integer.parseInt(eLadob.getText().toString());
-            data = 2*a + 2*b;
-            eRespuesta.setText(String.valueOf(data));
+            if (eLadoa.getText().toString().isEmpty() || eLadob.getText().toString().isEmpty()) {
+                eRespuesta.setText("Campo vacío");
+            }else {
+                int a = Integer.parseInt(eLadoa.getText().toString());
+                int b = Integer.parseInt(eLadob.getText().toString());
+                data = 2*a + 2*b;
+                eRespuesta.setText(String.valueOf(data));
+            }
         } else if (id == R.id.bCalcular && flag == 2) { //Area Triangulo
-            int a = Integer.parseInt(eLadoa.getText().toString());
-            int h = Integer.parseInt(eAltura.getText().toString());
-            data = (a*h)/2;
-            eRespuesta.setText(String.valueOf(data));
+            if (eLadoa.getText().toString().isEmpty() || eAltura.getText().toString().isEmpty()) {
+                eRespuesta.setText("Campo vacío");
+            }else {
+                int a = Integer.parseInt(eLadoa.getText().toString());
+                int h = Integer.parseInt(eAltura.getText().toString());
+                data = (a*h)/2;
+                eRespuesta.setText(String.valueOf(data));
+            }
         } else if (id == R.id.bCalcular && flag == 22) { // Perimetro Triangulo
-            int a = Integer.parseInt(eLadoa.getText().toString());
-            int b = Integer.parseInt(eLadob.getText().toString());
-            int c = Integer.parseInt(eLadoc.getText().toString());
-            data = a + b + c;
-            eRespuesta.setText(String.valueOf(data));
+            if (eLadoa.getText().toString().isEmpty() || eLadob.getText().toString().isEmpty() || eLadoc.getText().toString().isEmpty()) {
+                eRespuesta.setText("Campo vacío");
+            }else {
+                int a = Integer.parseInt(eLadoa.getText().toString());
+                int b = Integer.parseInt(eLadob.getText().toString());
+                int c = Integer.parseInt(eLadoc.getText().toString());
+                data = a + b + c;
+                eRespuesta.setText(String.valueOf(data));
+            }
         } else if (id == R.id.bCalcular && flag == 3) { // Area Circulo
-            int r = Integer.parseInt(eRadio.getText().toString());
-            double dat = Math.PI*Math.pow(r,2);
-            eRespuesta.setText(String.valueOf(dat));
+            if (eRadio.getText().toString().isEmpty()) {
+                eRespuesta.setText("Campo vacío");
+            }else {
+                int r = Integer.parseInt(eRadio.getText().toString());
+                double dat = Math.PI*Math.pow(r,2);
+                eRespuesta.setText(String.valueOf(dat));
+            }
         } else if (id == R.id.bCalcular && flag == 33) { // Perimetro Circulo
-            int r = Integer.parseInt(eRadio.getText().toString());
-            double dat = 2*Math.PI*r;
-            eRespuesta.setText(String.valueOf(dat));
+            if (eRadio.getText().toString().isEmpty()) {
+                eRespuesta.setText("Campo vacío");
+            }else {
+                int r = Integer.parseInt(eRadio.getText().toString());
+                double dat = 2*Math.PI*r;
+                eRespuesta.setText(String.valueOf(dat));
+            }
         } else if (id == R.id.bCalcular && flag == 4) { // Vol Cubo
-            int a = Integer.parseInt(eLadoa.getText().toString());
-            double dat = Math.pow(a,3);
-            eRespuesta.setText(String.valueOf(dat));
+            if (eLadoa.getText().toString().isEmpty()) {
+                eRespuesta.setText("Campo vacío");
+            }else {
+                int a = Integer.parseInt(eLadoa.getText().toString());
+                double dat = Math.pow(a,3);
+                eRespuesta.setText(String.valueOf(dat));
+            }
+        } else {
+            eRespuesta.setText("Campo vacío");
         }
 
     }
